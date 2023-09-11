@@ -25,13 +25,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 connectToDatabase();
 
-app.post("/api/sign-up", createUser);
+app.post("/api", createUser);
 
-app.get("/api/users/:id", getUserbyId);
+app.get("/api/user_id/:id", getUserbyId);
 
-app.put("/api/users/:id", updateUserName);
+app.put("/api/user_id/:id", updateUserName);
 
-app.delete("/api/users/:id", deleteUser);
+app.delete("/api/user_id/:id", deleteUser);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

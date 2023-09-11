@@ -17,8 +17,7 @@ Table of Contents
         Update a User
         Delete a User
     Sample Requests
-    Contributing
-    License
+    
 
 Introduction
 
@@ -33,10 +32,10 @@ Explain how to install and set up your API. Include instructions for cloning the
 bash
 
 # Clone the repository
-git clone https://github.com/yourusername/your-api.git
+git clone https://github.com/jjeett0007/hngx-stage-two-backend.git
 
 # Navigate to the project directory
-cd your-api
+cd hngx-stage-two-backend
 
 # Install dependencies
 npm install
@@ -48,9 +47,9 @@ Create a User
 
 To create a new user, send a POST request to the following endpoint:
 
-http
+http or https
 
-POST /api/users
+POST /api
 
 Include the user data in the request body in JSON format. The required fields are name.
 
@@ -62,30 +61,23 @@ json
   "name": "John Doe"
 }
 
-Read All Users
-
-To retrieve a list of all users, send a GET request to the following endpoint:
-
-http
-
-GET /api/users
 
 Read a User by ID
 
 To retrieve a specific user by their ID, send a GET request to the following endpoint:
 
-http
+http or https
 
-GET /api/users/:id
+GET /api/user_id/:id
 
 Replace :id with the actual ID of the user you want to retrieve.
 Update a User
 
 To update a user's information, send a PUT request to the following endpoint:
 
-http
+http or https
 
-PUT /api/users/:id
+PUT /api/user_id/:id
 
 Replace :id with the ID of the user you want to update. Include the updated user data in the request body in JSON format.
 
@@ -101,9 +93,9 @@ Delete a User
 
 To delete a user, send a DELETE request to the following endpoint:
 
-http
+http or https
 
-DELETE /api/users/:id
+DELETE /api/user_id/:id
 
 Replace :id with the ID of the user you want to delete.
 Sample Requests
@@ -113,21 +105,19 @@ Provide some sample API requests that users can copy and use as a reference.
 http
 
 # Sample POST Request (Create a User)
-POST /api/users
+POST /api
 Content-Type: application/json
 
 {
   "name": "Alice Smith"
 }
 
-# Sample GET Request (Read All Users)
-GET /api/users
 
 # Sample GET Request (Read a User by ID)
-GET /api/users/5f85a5b9d0ab8e5c897a16ef
+GET /api/user_id/5f85a5b9d0ab8e5c897a16ef
 
 # Sample PUT Request (Update a User)
-PUT /api/users/5f85a5b9d0ab8e5c897a16ef
+PUT /api/user_id/5f85a5b9d0ab8e5c897a16ef
 Content-Type: application/json
 
 {
@@ -135,4 +125,4 @@ Content-Type: application/json
 }
 
 # Sample DELETE Request (Delete a User)
-DELETE /api/users/5f85a5b9d0ab8e5c897a16ef
+DELETE /api/user_id/5f85a5b9d0ab8e5c897a16ef
