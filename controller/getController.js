@@ -1,6 +1,6 @@
 // controllers/userController.js
 
-const User = require('../models/User'); // Import the User model
+const User = require('../models/user'); // Import the User model
 
 // Controller to fetch all users
 exports.getAllUsers = async (req, res) => {

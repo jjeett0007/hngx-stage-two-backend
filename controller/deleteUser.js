@@ -1,13 +1,13 @@
 
 
-const User = require('../models/User'); // Import the User model
+const User = require('../models/user'); // Import the User model
 
 // Controller to delete a user by ID
 exports.deleteUser = async (req, res) => {
     try {
-        const { id } = req.params;
+        const objectIdUserId = req.params.id;
 
-        const deletedUser = await User.findByIdAndDelete(id);
+        const deletedUser = await User.findByIdAndDelete(objectIdUserId);
 
         if (!deletedUser) {
             return res.status(404).json({ message: 'User not found' });
