@@ -5,8 +5,12 @@ exports.updateUserName = async (req, res) => {
     const objectIdUserId = req.params.id;
     const { name } = req.body;
 
-    if (!name) {
-      return res.status(400).json({ message: "Name is required" });
+    const nameRegex = /^[A-Za-z\s]+$/;
+
+    if (!name || !nameRegex.test(name)) {
+      return res.status(400).json({
+        message: "Name is required and should only contain letters and spaces",
+      });
     }
 
     const updatedUser = await User.findByIdAndUpdate(

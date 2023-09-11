@@ -1,12 +1,18 @@
-const User = require('../models/user'); 
-
+const User = require("../models/user");
 
 exports.createUser = async (req, res) => {
   try {
     const { name } = req.body;
-    
-    if (!name) {
-      return res.status(400).json({ message: 'Name is required' });
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+
+    if (!name || !nameRegex.test(name)) {
+      return res
+        .status(400)
+        .json({
+          message:
+            "Name is required and should only contain letters and spaces",
+        });
     }
 
     const user = new User({ name });
@@ -14,6 +20,6 @@ exports.createUser = async (req, res) => {
 
     res.status(201).json(user);
   } catch (error) {
-    res.status(500).json({ error: 'Something went wrong' });
+    res.status(500).json({ error: "Something went wrong" });
   }
 };
