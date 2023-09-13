@@ -27,11 +27,11 @@ connectToDatabase();
 
 app.post("/api", createUser);
 
-app.get("/api/user_id/:id", getUserbyId);
+app.get("/api/:id", getUserbyId);
 
-app.put("/api/user_id/:id", updateUserName);
+app.put("/api/:id", updateUserName);
 
-app.delete("/api/user_id/:id", deleteUser);
+app.delete("/api/:id", deleteUser);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
