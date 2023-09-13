@@ -45,7 +45,7 @@ json
 
 2. Get User by ID
 
-    URL: /api/user_id/:id
+    URL: /api/:id
     Method: GET
     Response Format:
 
@@ -59,7 +59,7 @@ json
 
 3. Update User
 
-    URL: /api/user_id/:id
+    URL: /api/:id
     Method: PUT
     Request Format:
 
@@ -81,7 +81,7 @@ json
 
 4. Delete User
 
-    URL: /api/user_id/:id
+    URL: /api/:id
     Method: DELETE
     Response Format:
 
@@ -124,7 +124,7 @@ Request:
 
 http
 
-GET /api/user_id/64fe5fc33b5598069bf25fe6
+GET /api/64fe5fc33b5598069bf25fe6
 
 Response:
 
@@ -145,7 +145,7 @@ Request:
 
 http
 
-PUT /api/user_id/64fe5fc33b5598069bf25fe6
+PUT /api/64fe5fc33b5598069bf25fe6
 Content-Type: application/json
 
 {
@@ -171,7 +171,7 @@ Request:
 
 http
 
-DELETE /api/user_id/64fe5fc33b5598069bf25fe6
+DELETE /api/64fe5fc33b5598069bf25fe6
 
 Response:
 
